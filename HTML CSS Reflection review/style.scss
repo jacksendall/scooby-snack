@@ -2,6 +2,38 @@
 //     border: 1px solid crimson;
 // }
 // DEBUG ZONE
+@import 'colors';
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .search-bar{
+    max-width: 250px;
+  }
+}
+
+
+@supports (-ms-ime-align:auto) {
+  .search-bar{
+    max-width: 250px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (min-width: 1261px) {
+  .nm-col-xl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.search-bar{
+  max-width: auto;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
@@ -11,6 +43,59 @@ body {
   margin: 0;
   line-height: 1.42857143;
   overflow-x: hidden;
+}
+.search-form-mobile-wrapper{
+  display: none;
+  margin-top: 11px;
+  position: relative;
+}
+#search-input-mobile{padding-right: 40px;}
+.search-input-form-mobile{
+  button{
+    color: $nm-dark;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    line-height: 47px;
+    font-size: 20px;
+    outline: none;
+    background: none;
+    border: none;
+  
+  }
+}
+.mobile-container{
+  display: none;
+  .mobile{
+    color: $nm-dark;
+    font-size: 32px;
+  }
+  .fa-phone{
+    margin-left: 15px;
+  }
+}
+.search-form-mobile{
+  position: relative;
+  // width: calc(100vh - 54px);
+  background-color: rgba(0,0,0,0.1);
+  outline: 1px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(0,0,0,0.1);
+  transition: none;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  
+}
+@media only screen and (max-width: 768px) {
+  .search-form-mobile-wrapper{
+    display: block;
+  }
+  .search-form{
+    display: none;
+  }
+  .mobile-container{
+    display: block;
+  }
 }
 // Style navigation buttons
 .navmenu {
@@ -40,22 +125,22 @@ body {
         padding-bottom: 10px;
       }
       .fa-code {
-        color: #926fb1;
+        color: $design-a;
       }
       .fa-desktop {
-        color: #4183d7;
+        color: $support-a;
       }
       .fa-phone-alt {
-        color: #d64541;
+        color: $services-a;
       }
       .fa-th {
-        color: #67809f;
+        color: $software-a;
       }
       .fa-poll {
-        color: #2ecc71;
+        color: $marketing-a;
       }
       .fa-shield-alt {
-        color: #f62459;
+        color: $security-a;
       }
     }
   }
@@ -73,63 +158,63 @@ body {
 .navmenu {
   background-color: rgb(51, 54, 69);
   #design-menu {
-    background-color: #79539a;
+    background-color: $design-b;
   }
   #design-menu:before {
-    background-color: #79539a;
+    background-color: $design-b;
   }
   #design-menu:after {
-    background-color: #79539a;
+    background-color: $design-b;
   }
 
   #support-menu {
-    background-color: #286abd;
+    background-color: $support-b;
   }
   #support-menu:before {
-    background-color: #286abd;
+    background-color: $support-b;
   }
   #support-menu:after {
-    background-color: #286abd;
+    background-color: $support-b;
   }
 
   #telecoms-menu {
-    background-color: #bc2c28;
+    background-color: $services-b;
   }
   #telecoms-menu:before {
-    background-color: #bc2c28;
+    background-color: $services-b;
   }
   #telecoms-menu:after {
-    background-color: #bc2c28;
+    background-color: $services-b;
   }
 
   #marketing-menu {
-    background-color: #25a25a;
+    background-color: $marketing-b;
   }
   #marketing-menu:before {
-    background-color: #25a25a;
+    background-color: $marketing-b;
   }
   #marketing-menu:after {
-    background-color: #25a25a;
+    background-color: $marketing-b;
   }
 
   #software-menu {
-    background-color: #526781;
+    background-color: $software-b;
   }
   #software-menu:before {
-    background-color: #526781;
+    background-color: $software-b;
   }
   #software-menu:after {
-    background-color: #526781;
+    background-color: $software-b;
   }
 
   #security-menu {
-    background-color: #de093f;
+    background-color: $security-b;
   }
   #security-menu:before {
-    background-color: #de093f;
+    background-color: $security-b;
   }
   #security-menu:after {
-    background-color: #de093f;
+    background-color: $security-b;
   }
   // I realise now that I could have nested the before and after (oh well..)
 
@@ -238,7 +323,7 @@ body {
       bottom: 0;
     }
     .design:hover {
-      background-color: #926fb1;
+      background-color: $design-a;
       i {
         color: white;
       }
@@ -247,7 +332,7 @@ body {
       }
     }
     .support:hover {
-      background-color: #4183d7;
+      background-color: $support-a;
       i {
         color: white;
       }
@@ -256,7 +341,7 @@ body {
       }
     }
     .telecoms:hover {
-      background-color: #d64541;
+      background-color: $services-a;
       i {
         color: white;
       }
@@ -265,7 +350,7 @@ body {
       }
     }
     .software:hover {
-      background-color: #67809f;
+      background-color: $software-a;
       i {
         color: white;
       }
@@ -274,7 +359,7 @@ body {
       }
     }
     .marketing:hover {
-      background-color: #2ecc71;
+      background-color: $marketing-a;
       i {
         color: white;
       }
@@ -283,7 +368,7 @@ body {
       }
     }
     .security:hover {
-      background-color: #f62459;
+      background-color: $security-a;
       i {
         color: white;
       }
@@ -302,8 +387,8 @@ body {
   margin: 0;
 }
 
+
 .inner {
-  display: flex;
   padding: 20px 0;
   #headrow {
     .col {
@@ -341,8 +426,11 @@ body {
       text-align: center;
       font-size: 30px;
       line-height: 1rem;
-      background-color: #333645;
-      border-color: #333645;
+      background-color: $nm-dark;
+      border-color: $nm-dark;
+      &:hover{
+        background-color: $nm-darker;
+      }
     }
     #search-submit {
       margin-left: -5px;
@@ -363,7 +451,7 @@ body {
     padding: 5px 15px;
     text-transform: uppercase;
     border-radius: 3px;
-    white-space: normal;
+    white-space: nowrap;
     color: white;
   }
   .btn:focus {
@@ -373,13 +461,19 @@ body {
 
 .btn-primary-nm {
   color: white;
-  background-color: #4183d7;
-  border-color: #4183d7;
+  background-color: $support-a;
+  border-color: $support-a;
+  &:hover{
+    background-color: $support-c;
+  }
 }
 .btn-secondary-nm {
   color: white;
-  background-color: #999aa2;
-  border-color: #999aa2;
+  background-color: $btn;
+  border-color: $btn;
+  &:hover {
+    background-color: $btn-alt;
+  }
 }
 
 .search-bar {
@@ -403,7 +497,9 @@ body {
 .form-control {
   padding: 5px 15px;
   border-color: #ccc;
-
+}
+.search-form-mobile{
+  height: 47px;
 }
 .navmenu {
   text-align: center;
@@ -450,6 +546,11 @@ body {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    width: auto;
+  }
+}
 .banner {
   color: white;
   display: flex;
@@ -477,8 +578,8 @@ body {
     padding: 0;
     z-index: 3;
     a {
-      background-color: #926fb1;
-      border-color: #926fb1;
+      background-color: $design-a;
+      border-color: $design-a;
       border-radius: 3px;
       text-transform: uppercase;
       line-height: 50px;
@@ -525,7 +626,7 @@ body {
   }
   .brand-background {
     color: white;
-    background-color: #333645;
+    background-color: $nm-dark;
     background-image: url(img/branded.png);
     background-repeat: no-repeat;
     background-position: right center;
@@ -561,10 +662,10 @@ body {
   }
   .btn-white {
     background-color: white;
-    color: #333645;
+    color: $nm-dark;
 
     .fas {
-      color: #333645;
+      color: $nm-dark;
       margin-left: 10px;
     }
   }
@@ -575,7 +676,7 @@ body {
     border-radius: 3px;
     padding: 30px;
     box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-    color: #333645;
+    color: $nm-dark;
     span {
       display: block;
     }
@@ -594,7 +695,7 @@ body {
         width: 28px;
         height: 3px;
         display: block;
-        background-color: #333645;
+        background-color: $nm-dark;
       }
     }
     &:hover {
@@ -629,16 +730,16 @@ body {
     .software {
       &:hover {
         color: white;
-        background-color: #67809f;
+        background-color: $software-a;
         text-decoration: none;
         .icon {
           background-color: white;
           i {
-            color: #67809f;
+            color: $software-a;
           }
         }
         .btn {
-          color: #67809f;
+          color: $software-a;
           background-color: white;
         }
       }
@@ -646,16 +747,16 @@ body {
     .support {
       &:hover {
         color: white;
-        background-color: #4183d7;
+        background-color: $support-a;
         text-decoration: none;
         .icon {
           background-color: white;
           i {
-            color: #4183d7;
+            color: $support-a;
           }
         }
         .btn {
-          color: #4183d7;
+          color: $support-a;
           background-color: white;
         }
       }
@@ -663,16 +764,16 @@ body {
     .marketing {
       &:hover {
         color: white;
-        background-color: #2ecc71;
+        background-color: $marketing-a;
         text-decoration: none;
         .icon {
           background-color: white;
           i {
-            color: #2ecc71;
+            color: $marketing-a;
           }
         }
         .btn {
-          color: #2ecc71;
+          color: $marketing-a;
           background-color: white;
         }
       }
@@ -680,16 +781,16 @@ body {
     .telecoms {
       &:hover {
         color: white;
-        background-color: #bc2c28;
+        background-color: $services-a;
         text-decoration: none;
         .icon {
           background-color: white;
           i {
-            color: #bc2c28;
+            color: $services-a;
           }
         }
         .btn {
-          color: #bc2c28;
+          color: $services-a;
           background-color: white;
         }
       }
@@ -697,16 +798,16 @@ body {
     .design {
       &:hover {
         color: white;
-        background-color: #79539a;
+        background-color: $design-a;
         text-decoration: none;
         .icon {
           background-color: white;
           i {
-            color: #79539a;
+            color: $design-a;
           }
         }
         .btn {
-          color: #79539a;
+          color: $design-a;
           background-color: white;
         }
       }
@@ -714,16 +815,16 @@ body {
     .security {
       &:hover {
         color: white;
-        background-color: #de093f;
+        background-color: $security-a;
         text-decoration: none;
         .icon {
           background-color: white;
           i {
-            color: #de093f;
+            color: $security-a;
           }
         }
         .btn {
-          color: #de093f;
+          color: $security-a;
           background-color: white;
         }
       }
@@ -731,16 +832,16 @@ body {
     .training {
       &:hover {
         color: white;
-        background-color: #79539a;
+        background-color: $design-a;
         text-decoration: none;
         .icon {
           background-color: white;
           i {
-            color: #79539a;
+            color: $design-a;
           }
         }
         .btn {
-          color: #79539a;
+          color: $design-a;
           background-color: white;
         }
       }
@@ -748,69 +849,75 @@ body {
   }
   .software {
     .btn {
-      background-color: #67809f;
+      background-color: $software-a;
       display: inline-block;
     }
     .icon {
-      background-color: #67809f;
+      background-color: $software-a;
     }
   }
   .support {
     .btn {
-      background-color: #4183d7;
+      background-color: $support-a;
       display: inline-block;
     }
     .icon {
-      background-color: #4183d7;
+      background-color: $support-a;
     }
   }
   .marketing {
     .btn {
-      background-color: #2ecc71;
+      background-color: $marketing-a;
       display: inline-block;
     }
     .icon {
-      background-color: #2ecc71;
+      background-color: $marketing-a;
     }
   }
   .telecoms {
     .btn {
-      background-color: #bc2c28;
+      background-color: $services-b;
       display: inline-block;
     }
     .icon {
-      background-color: #bc2c28;
+      background-color: $services-b;
     }
   }
   .design {
     .btn {
-      background-color: #79539a;
+      background-color: $design-b;
       display: inline-block;
     }
     .icon {
-      background-color: #79539a;
+      background-color: $design-b;
     }
   }
   .security {
     .btn {
-      background-color: #de093f;
+      background-color: $security-b;
       display: inline-block;
     }
     .icon {
-      background-color: #de093f;
+      background-color: $security-b;
     }
   }
   .training {
     .btn {
-      background-color: #79539a;
+      background-color: $design-b;
       display: inline-block;
     }
     .icon {
-      background-color: #79539a;
+      background-color: $design-b;
     }
   }
   i {
     color: white;
+  }
+  .img-responsive {
+    width: 100%;
+    height: auto;
+    transition-duration: .2s;
+    transform-style: ease-in-out;
   }
   .article-list {
     .img-container {
@@ -820,8 +927,6 @@ body {
       &:hover{
         .img-responsive{
           transform: scale(1.1);
-          transition-duration: .2s;
-          transform-style: ease-in-out;
           opacity: 75%;
         }
       }
@@ -838,14 +943,6 @@ body {
         letter-spacing: 1px;
         z-index: 9;
       }
-    }
-    .img-responsive {
-      width: 100%;
-      height: auto;
-      // &:hover{
-      //   transform: scale(1.1);
-      //   transition-duration: .2s;
-      // }
     }
     .block {
       margin-top: 0;
@@ -868,6 +965,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
     .item {
       display: flex;
       padding: 0 20px;
@@ -888,6 +986,25 @@ body {
         }
         .box {
           display: block;
+          h3 {
+            text-align: center;
+            position: relative;
+            font-size: 1.123rem;
+            padding-bottom: 17px;
+            margin: 0 0 11px;
+            &::after{
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              width: 28px;
+              height: 3px;
+              display: block;
+              background-color: #fff;
+            }
+          }
         }
         .arrow {
           display: block;
@@ -911,7 +1028,7 @@ body {
     }
     .box {
       display: none;
-      background-color: #333645;
+      background-color: $nm-dark;
       color: white;
       padding: 20px;
       font-size: 0.875rem;
@@ -919,6 +1036,12 @@ body {
       margin: 0 auto 50px;
       h3 {
         position: relative;
+      }
+      p {
+        font-size: 0.8125rem;
+        line-height: 1.375rem;
+        margin-bottom: 0;
+        text-align: center;
       }
     }
     .arrow {
@@ -933,7 +1056,7 @@ body {
         display: inline-block;
         border-style: solid;
         border-width: 35px 36px 0 36px;
-        border-color: #333645 transparent transparent transparent;
+        border-color: $nm-dark transparent transparent transparent;
       }
     }
   }
@@ -950,7 +1073,7 @@ body {
       display: flex;
     }
     span {
-      color: #333645;
+      color: $nm-dark;
       padding: 40px 0;
       position: relative;
       text-transform: uppercase;
@@ -968,7 +1091,7 @@ body {
         left: 0;
         right: 0;
         width: 100%;
-        background-color: #333645;
+        background-color: $nm-dark;
         height: 5px;
         box-sizing: border-box;
         z-index: 10;
@@ -997,7 +1120,7 @@ body {
       vertical-align: middle;
       padding: 0 0 0 20px;
       .text-main {
-        color: #333645;
+        color: $nm-dark;
       }
     }
   }
@@ -1018,35 +1141,35 @@ body {
   }
   
   .software {
-    color: #67809f;
+    color: $software-a;
     h3 {
-      color: #67809f;
+      color: $software-a;
     }
     .category{ //tooltip
-      background-color: #67809f;
+      background-color: $software-a;
     }
   }
   .marketing { //tooltip
-    color: #2ecc71;
+    color: $marketing-a;
     h3 {
-      color: #2ecc71;
+      color: $marketing-a;
     }
     .category{ //tooltip
-      background-color: #2ecc71;
+      background-color: $marketing-a;
     }
   }
   .design {
-    color: #79539a;
+    color: $design-b;
     h3 {
-      color: #79539a;
+      color: $design-b;
     }
     .category{ //tooltip
-      background-color: #79539a;
+      background-color: $design-b;
     }
   }
 }
 footer {
-  background-color: #333645;
+  background-color: $nm-dark;
   color: white;
   padding: 47px 0 43px;
   h4 {

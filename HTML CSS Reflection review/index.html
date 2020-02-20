@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Jack Sendall's CSS & HTML Reflection">
@@ -19,17 +19,17 @@
         <div class="inner">
             <div class="container">
                 <div class="row" id="headrow">
-                    <div class="col-s-6 col-m-6 col-lg-5 col-xl-4">
+                    <div class="col-s-6 col-m-6 col-lg-5 col-xl-4" id="logo-column">
                         <div class="logo-container">     
-                            <a class="logo" href="http://www.netmatters.co.uk/"><img src="img/f-logo.png"></a>
+                            <a class="logo" href="http://www.netmatters.co.uk/"><img src="img/f-logo.png" alt="Netmatters logo"></a>
                         </div>
                     </div>
                     <div class="col-s-3 col-m-6 col-lg-7 col-xl-8">
                         <div class="actions">
                             <a href="https://support.netmatters.com/" target="_blank" class="btn btn-primary-nm" id="support-nm"><i class="fas fa-mouse"></i> Support</a>
-                            <a href="https://www.netmatters.com/contact-us" target="_blank" class="btn btn-secondary-nm" id="contact-nm"><i class="far fa-paper-plane"></i>Contact</a>
+                            <a href="/contact-us" target="_blank" class="btn btn-secondary-nm" id="contact-nm"><i class="far fa-paper-plane"></i>Contact</a>
                             <div class="search-form">
-                                <form class="search-bar-form form-inline" method="GET" action="http://www.netmatters.co.uk/search/" accept-charset="utf-8" class="search-form">
+                                <form class="search-bar-form form-inline" method="GET" action="http://www.netmatters.co.uk/search/" accept-charset="utf-8">
                                     <input class="search-bar form-control" placeholder="Search..." id="search-input" name="keyword" type="text">
                                     <button class="btn btn-secondary-nm" type="submit" id="search-submit">
                                         <span><i class="fas fa-search"></i></span>
@@ -39,13 +39,27 @@
                                     <span><i class="fas fa-search"></i></span>
                                 </button>
                             </div>
+                            <div class="mobile-container">
+                                <a class="mobile" href="tel:01603704020">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
                             <button type="button" class="btn-menu-nm btn btn-secondary-nm">
                                 <i class="fas fa-bars"></i><br>
                                 <span class="menu-txt">Menu</span>
                             </button>
                         </div>    
                     </div>
+
                 </div>  
+                <div class="search-form-mobile-wrapper">
+                    <form method="GET" class="search-input-form-mobile" action="/search" accept-charset="utf-8">
+                        <input class="search-form-mobile form-control search-bar" placeholder="Search..." id="search-input-mobile" name="keyword" type="text">
+                        <button type="submit" id="search-submit-mobile">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
             </div>      
         </div>
     </div>
@@ -54,7 +68,7 @@
             <ul class="hover-nav row">
                 <li class="design col"> 
                     
-                    <a href="https://www.netmatters.co.uk/web-design">
+                    <a href="/web-design">
                         <i class="fas fa-code"></i>
                         <small>Web</small>
                         Design
@@ -83,7 +97,7 @@
                 </li>
                 <li class="support col">
                     
-                    <a href="https://www.netmatters.co.uk/it-support">
+                    <a href="/it-support">
                     <i class="fas fa-desktop"></i>
                     <small>IT</small>
                     Support
@@ -111,7 +125,7 @@
                 </li>
                 <li class="telecoms col">
                     
-                    <a href="https://www.netmatters.co.uk/telecoms-services">
+                    <a href="/telecoms-services">
                     <i class="fas fa-phone-alt"></i>
                     <small>Telecoms</small>
                     Services
@@ -138,7 +152,7 @@
                     </ul>
                 </li>
                 <li class="software col">
-                    <a href="https://www.netmatters.co.uk/bespoke-software">
+                    <a href="/bespoke-software">
                     <i class="fas fa-th"></i>
                     <small>Bespoke</small>
                     Software
@@ -165,7 +179,7 @@
                     </ul>    
                 </li>
                 <li class="marketing col">
-                    <a href="https://www.netmatters.co.uk/digital-marketing">
+                    <a href="/digital-marketing">
                     <i class="fas fa-poll"></i>
                     <small>Digital</small>
                     Marketing
@@ -192,7 +206,7 @@
                     </ul>
                 </li>
                 <li class="security col">
-                    <a href="https://www.netmatters.co.uk/cyber-security">
+                    <a href="/cyber-security">
                     <i class="fas fa-shield-alt"></i>
                     <small>Cyber</small>
                     Security
@@ -248,6 +262,7 @@
                             </span>
                             <span class="p">
                                 Tailored software solutions to improve business productivity and online profits. Our expert team will ensure a software solution.
+                                <br class="min1261">&nbsp;
                             </span>
                             <span class="btn-container">
                                 <span class="btn btn-software">Read More</span>
@@ -280,21 +295,23 @@
                             </span>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="nm-col-xl-3 col-lg-6 col-md-6">
                         <a href="http://www.netmatters.co.uk/telecoms-services" class="block telecoms">
-                            <span class="icon"><i class="fas fa-phone-alt"></i></i></span>
+                            <span class="icon"><i class="fas fa-phone-alt"></i></span>
                             <span class="h2">
                                 Telecoms Services
                             </span>
                             <span class="p">
                                 Stay connected with bespoke telecoms solutions when you need it most.
+                                
+                                <br class="max991">&nbsp;
                             </span>
                             <span class="btn-container">
                                 <span class="btn btn-telecoms">Read More</span>
                             </span>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="nm-col-xl-3 col-lg-6 col-md-6">
                         <a href="http://www.netmatters.co.uk/web-design" class="block design">
                             <span class="icon"><i class="fas fa-code"></i></span>
                             <span class="h2">Web Design</span>
@@ -306,20 +323,22 @@
                             </span>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="nm-col-xl-3 col-lg-6 col-md-6">
                         <a href="http://www.netmatters.co.uk/bespoke-marketing" class="block security">
-                            <span class="icon"><i class="fas fa-shield-alt"></i></i></span>
+                            <span class="icon"><i class="fas fa-shield-alt"></i></span>
                             <span class="h2">Cyber Security</span>
                             <span class="p">
                                 Ensuring your online business stays secure 24/7, 365 days of the year. 
-                                <br class="max991 min1261">&nbsp;
+                                
+                                <br class="max991">&nbsp;
+                                
                             </span>
                             <span class="btn-container">
                                 <span class="btn btn-security">Read More</span>
                             </span>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="nm-col-xl-3 col-lg-6 col-md-6">
                         <a href="http://www.netmatters.co.uk/bespoke-marketing" class="block training">
                             <span class="icon"><i class="fas fa-poll"></i></span>
                             <span class="h2">Developer Training</span>
@@ -378,7 +397,7 @@
                                 <div class="item software">
                                     <div class="img-container">
                                         <a href="#" class="category btn-tooltip">Careers</a>
-                                        <a class="img-responsive" href="https://www.netmatters.co.uk/our-careers/senior-web-developer">
+                                        <a class="img-responsive" href="/our-careers/senior-web-developer">
                                             <img src="img/senior-web-developer.jpg" class="img-responsive" alt="Senior Web Developer">
                                         </a>
                                     </div>
@@ -402,7 +421,7 @@
                                 <div class="item marketing">
                                     <div class="img-container">
                                         <a href="#" class="category btn-tooltip">Insights</a>
-                                        <a class="img-responsive" href="https://www.netmatters.co.uk/our-careers/senior-web-developer">
+                                        <a class="img-responsive" href="/our-careers/senior-web-developer">
                                             <img src="img/why-its-crucial.jpg" class="img-responsive" alt="Why It's Crucial To Choose The Right Marketing Budget To Grow Your Business.">
                                         </a>
                                     </div>
@@ -426,7 +445,7 @@
                                 <div class="item design">
                                     <div class="img-container">
                                         <a href="#" class="category btn-tooltip">Careers</a>
-                                        <a class="img-responsive" href="https://www.netmatters.co.uk/our-careers/senior-web-developer">
+                                        <a class="img-responsive" href="/our-careers/senior-web-developer">
                                             <img src="img/hiring-web-developer.jpg" class="img-responsive" alt="Web Developer">
                                         </a>
                                     </div>
@@ -462,8 +481,8 @@
                                 <div class="arrow"></div>
                             </div>
                         </div>
-                        <img src="img/busseys-c.png" class="colored">
-                        <img src="img/busseys-g.jpg" class="greyscale">
+                        <img src="img/busseys-c.png" alt="Busseys" class="colored">
+                        <img src="img/busseys-g.jpg" alt="Busseys" class="greyscale">
                     </div>
                     <div class="item">
                         <div class="description">
@@ -473,8 +492,8 @@
                                 <div class="arrow"></div>
                             </div>
                         </div>
-                        <img src="img/crane-c.png" class="colored">
-                        <img src="img/crane-g.jpg" class="greyscale">
+                        <img src="img/crane-c.png" alt="Crane" class="colored">
+                        <img src="img/crane-g.jpg" alt="Crane" class="greyscale">
                     </div>
                     <div class="item">
                         <div class="description">
@@ -484,8 +503,8 @@
                                 <div class="arrow"></div>
                             </div>
                         </div>
-                        <img src="img/beat-c.png" class="colored">
-                        <img src="img/beat-g.jpg" class="greyscale">
+                        <img src="img/beat-c.png" alt="Beat" class="colored">
+                        <img src="img/beat-g.jpg" alt="Beat" class="greyscale">
                     </div>
                     <div class="item">
                         <div class="description">
@@ -495,8 +514,8 @@
                                 <div class="arrow"></div>
                             </div>
                         </div>
-                        <img src="img/northern-diver-c.png" class="colored">
-                        <img src="img/northern-diver-g.jpg" class="greyscale">
+                        <img src="img/northern-diver-c.png" alt="Northern Diver" class="colored">
+                        <img src="img/northern-diver-g.jpg" alt="Northern Diver" class="greyscale">
                     </div>
                 </div>
             </div>
