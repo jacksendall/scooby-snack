@@ -5,15 +5,19 @@
 @import 'colors';
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .search-bar{
-    max-width: 250px;
+  #top-form{
+    .search-bar{
+      max-width: 250px;
+    }
   }
 }
 
 
 @supports (-ms-ime-align:auto) {
-  .search-bar{
-    max-width: 250px;
+  #top-form{
+    .search-bar{
+      max-width: 250px;
+    }
   }
 }
 
